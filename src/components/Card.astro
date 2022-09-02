@@ -1,0 +1,28 @@
+---
+export interface Props {
+	img: string;
+	title: string;
+	body: string;
+	href: string;
+}
+
+const { img, href, title, body } = Astro.props;
+---
+
+<li class="w-full flex">
+	<a href={href} class="bg-cyan-600 text-white transition-transform hover:scale-105" title={title}>
+		<div class="relative">
+			<div class="bg-cyan-900 absolute inset-0 opacity-40"></div>
+			<div class="border border-white absolute inset-4 opacity-50"></div>
+			<img src={'/img/' + img + '.webp'} alt="" width="400" height="265" class="w-full" />
+		</div>
+		<div class="p-6">
+			<h3 class="uppercase text-2xl mb-4">
+				{title}
+			</h3>
+			<p>
+				{body}
+			</p>
+		</div>
+	</a>
+</li>

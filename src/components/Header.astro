@@ -1,0 +1,25 @@
+<header class="bg-cyan-900 relative">
+  <div class="max-w-screen-xl px-4 mx-auto flex justify-end">
+    <button class="w-[32px] h-[32px] my-3 block sm:hidden z-20" x-on:click="menuOpened = !menuOpened" aria-label="Menu">
+      <span class="w-[24px] h-[2px] bg-white block my-[4px] mx-auto origin-center" x-bind:class="menuOpened ? 'rotate-45 translate-y-[6px]' : ''"></span>
+      <span class="w-[24px] h-[2px] bg-white block my-[4px] mx-auto" x-bind:class="menuOpened ? 'opacity-0' : ''"></span>
+      <span class="w-[24px] h-[2px] bg-white block my-[4px] mx-auto origin-center"x-bind:class="menuOpened ? '-rotate-45 -translate-y-[6px]' : ''"></span>
+    </button>
+    <nav class="fixed top-0 bottom-0 h-screen bg-cyan-900 w-[15rem] shadow-[0_5px_10px_0_rgba(0,0,0,0.5)] sm:static sm:h-auto sm:w-auto sm:shadow-none transition-all z-10" x-bind:class="menuOpened ? 'right-0' : '-right-[15rem]'" x-cloak>
+      <ul class="sm:flex mt-12 sm:mt-0">
+        <li>
+          <a href="" class="text-slate-400 uppercase p-4 flex hover:text-white transition-colors">Home</a>
+        </li>
+        <li>
+          <a href="" class="text-slate-400 uppercase p-4 flex hover:text-white transition-colors">About me</a>
+        </li>
+        <li>
+          <a href="" class="text-slate-400 uppercase p-4 flex hover:text-white transition-colors">My work</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<style>
+	[x-cloak] { display: none !important; }
+</style>
