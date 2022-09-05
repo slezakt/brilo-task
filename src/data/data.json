@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "img": "project01",
+    "title": "Epic Project",
+    "content": "Learn how Astro works and explore the official API docs."
+  },
+  {
+    "id": 2,
+    "img": "project02",
+    "title": "Another work i did",
+    "content": "Supercharge your project with new frameworks and libraries."
+  },
+  {
+    "id": 3,
+    "img": "project03",
+    "title": "Rebrand of this company",
+    "content": "Explore a galaxy of community-built starter themes."
+  }
+]

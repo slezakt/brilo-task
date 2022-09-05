@@ -2,31 +2,24 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Hero from '../components/Hero.astro';
+import data from '../data/data.json';
 ---
 
-<Layout title="Brilo Task">
-	<Hero />
-	<section class="my-24 md:my-32">
-		<h2 class="text-white uppercase text-2xl font-light mb-4">What i did</h2>
-		<ul role="list" class="grid md:grid-cols-3 gap-6">
-			<Card
-				img="project01"
-				href="/"
-				title="Epic Project"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				img="project02"
-				href="/"
-				title="Another work i did"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				img="project03"
-				href="/"
-				title="Rebrand of this company"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-		</ul>
-	</section>
+<Layout title='Brilo Task'>
+  <Hero />
+  <section class='my-24 md:my-32'>
+    <h2 class='text-white uppercase text-2xl font-light mb-4'>What i did</h2>
+    <ul role='list' class='grid md:grid-cols-3 gap-6'>
+      {
+        data.map((item) => (
+          <Card
+            img={item.img}
+            href='/'
+            title={item.title}
+            body={item.content}
+          />
+        ))
+      }
+    </ul>
+  </section>
 </Layout>
